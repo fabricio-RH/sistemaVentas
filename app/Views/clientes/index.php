@@ -23,6 +23,7 @@
                             <th>Nombre</th>
                             <th>DNI / RUC</th>
                             <th>Teléfono</th>
+                            <th>Email</th>
                             <th>Dirección</th>
                             <th>Acciones</th>
                         </tr>
@@ -33,6 +34,7 @@
                             <td><?= $cli['nombre'] ?></td>
                             <td><?= $cli['dni_ruc'] ?></td>
                             <td><?= $cli['telefono'] ?></td>
+                            <td><?= $cli['email'] ?></td>
                             <td><?= $cli['direccion'] ?></td>
                             <td>
                                 <button class="btn btn-warning btn-sm" onclick="editarCliente(<?= htmlspecialchars(json_encode($cli)) ?>)">
@@ -66,6 +68,7 @@
                 <label>Nombre Completo / Razón Social</label>
                 <input type="text" name="nombre" id="nombre" class="form-control" required>
             </div>
+
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label>DNI / RUC</label>
@@ -75,7 +78,12 @@
                     <label>Teléfono</label>
                     <input type="text" name="telefono" id="telefono" class="form-control">
                 </div>
+                <div class="col-md-6 mb-3">
+                    <label>Correo</label>
+                    <input type="email" name="email" id="email" class="form-control">
+                </div>
             </div>
+
             <div class="mb-3">
                 <label>Dirección</label>
                 <input type="text" name="direccion" id="direccion" class="form-control">
