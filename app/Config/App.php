@@ -200,5 +200,3 @@ class App extends BaseConfig
      */
     public bool $CSPEnabled = false;
 }
-
-// Prueba de cambio
