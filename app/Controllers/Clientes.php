@@ -22,7 +22,9 @@ class Clientes extends BaseController {
             'nombre'    => $this->request->getPost('nombre'),
             'dni_ruc'   => $this->request->getPost('dni_ruc'),
             'telefono'  => $this->request->getPost('telefono'),
+            'email' => $this->request->getVar('email'),
             'direccion' => $this->request->getPost('direccion')
+            
         ];
 
         if ($id) {
