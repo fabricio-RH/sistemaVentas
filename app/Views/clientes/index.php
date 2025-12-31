@@ -25,6 +25,7 @@
                             <th>Teléfono</th>
                             <th>Email</th>
                             <th>Dirección</th>
+                            <th>Hobby</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -36,6 +37,7 @@
                             <td><?= $cli['telefono'] ?></td>
                             <td><?= $cli['email'] ?></td>
                             <td><?= $cli['direccion'] ?></td>
+                            <td><?= $cli['hobby'] ?></td>
                             <td>
                                 <button class="btn btn-warning btn-sm" onclick="editarCliente(<?= htmlspecialchars(json_encode($cli)) ?>)">
                                     <i class="bi bi-pencil-square"></i>
@@ -88,6 +90,10 @@
                 <label>Dirección</label>
                 <input type="text" name="direccion" id="direccion" class="form-control">
             </div>
+
+            <div class="mb-3">
+                <label>Hobby</label>
+                <input type="text" name="hobby" id="hobby" class="form-control">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -107,6 +113,7 @@
         document.getElementById('dni_ruc').value = '';
         document.getElementById('telefono').value = '';
         document.getElementById('direccion').value = '';
+        document.getElementById('hobby').value = '';
         document.getElementById('tituloModal').innerText = 'Nuevo Cliente';
     }
 
@@ -116,7 +123,7 @@
         document.getElementById('dni_ruc').value = datos.dni_ruc;
         document.getElementById('telefono').value = datos.telefono;
         document.getElementById('direccion').value = datos.direccion;
-        
+        document.getElementById('hobby').value = datos.hobby;
         document.getElementById('tituloModal').innerText = 'Editar Cliente';
         var myModal = new bootstrap.Modal(document.getElementById('modalCliente'));
         myModal.show();
